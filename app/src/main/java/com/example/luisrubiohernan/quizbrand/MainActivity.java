@@ -1,7 +1,9 @@
 package com.example.luisrubiohernan.quizbrand;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -34,4 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 .apply(RequestOptions.circleCropTransform())
                 .into(subtitle);*/
     }
+
+    public void onClickMenuJuego(View v){
+        Intent view =new Intent(getApplicationContext(),menu_juego.class);
+        startActivity(view);
+    }
 }
+
