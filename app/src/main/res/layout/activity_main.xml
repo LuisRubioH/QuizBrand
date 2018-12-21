@@ -46,7 +46,7 @@
         android:layout_marginStart="8dp"
         android:backgroundTint="@color/colorPrimary"
         android:onClick="onClickMenuJuego"
-        android:text="Start"
+        android:text="@string/empezar"
         android:textColor="@color/colorBlanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

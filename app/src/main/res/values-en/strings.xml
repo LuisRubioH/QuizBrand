@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizBrand</string>
+    <string name="eliminar">DELETE</string>
+    <string name="ok">OK</string>
+    <string name="nombres">NAMES</string>
+    <string name="paises">COUNTRIES</string>
+    <string name="sectores">SECTORS</string>
+    <string name="menu">MENU</string>
+    <string name="opciones">OPTIONS</string>
+    <string name="empezar">START</string>
+</resources>

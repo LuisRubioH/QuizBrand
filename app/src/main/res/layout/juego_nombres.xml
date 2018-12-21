@@ -193,7 +193,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="32dp"
         android:onClick="onClickDelete"
-        android:text="ELIMINAR"
+        android:text="@string/eliminar"
         app:layout_constraintStart_toEndOf="@+id/btn_before"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutAnswerDown" />
 
@@ -229,7 +229,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="32dp"
         android:onClick="onClickOK"
-        android:text="OK"
+        android:text="@string/ok"
         app:layout_constraintEnd_toStartOf="@+id/btn_next"
         app:layout_constraintStart_toEndOf="@+id/btn_delete"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutAnswerDown" />

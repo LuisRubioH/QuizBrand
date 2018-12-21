@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">QuizBrand</string>
+    <string name="app_name" translatable="false">QuizBrand</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="ok">OK</string>
+    <string name="nombres">NOMBRES</string>
+    <string name="paises">PAÍSES</string>
+    <string name="sectores">SECTORES</string>
+    <string name="menu">MENÚ</string>
+    <string name="opciones">OPCIONES</string>
+    <string name="empezar">EMPEZAR</string>
 </resources>

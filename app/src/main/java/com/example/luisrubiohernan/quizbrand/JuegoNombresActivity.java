@@ -63,8 +63,6 @@ public class JuegoNombresActivity extends AppCompatActivity {
 
 
 
-
-
         //TODO COMPLETAR AIXO
        /* boolean spsp=false; //salto de primera a segunda palabra
         boolean sstp=false; //salto de segunda a tercera palabra
@@ -100,12 +98,6 @@ public class JuegoNombresActivity extends AppCompatActivity {
         }else{
 
         }*/
-
-
-
-
-
-
 
 
 
