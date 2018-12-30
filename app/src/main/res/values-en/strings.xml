@@ -9,4 +9,6 @@
     <string name="menu">MENU</string>
     <string name="opciones">OPTIONS</string>
     <string name="empezar">START</string>
+    <string name="seleccionaPais">Select the country</string>
+    <string name="seleccionaSector">Select the sector</string>
 </resources>

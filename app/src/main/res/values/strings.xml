@@ -8,4 +8,7 @@
     <string name="menu">MENÚ</string>
     <string name="opciones">OPCIONES</string>
     <string name="empezar">EMPEZAR</string>
+
+    <string name="seleccionaPais">Selecciona el país de procedencia:</string>
+    <string name="seleccionaSector">Selecciona el sector al que pertenece</string>
 </resources>

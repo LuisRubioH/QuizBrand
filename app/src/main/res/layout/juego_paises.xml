@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,46 +9,82 @@
         android:id="@+id/imageView2"
         android:layout_width="240dp"
         android:layout_height="195dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/colorPrimary" />
 
     <CheckedTextView
         android:id="@+id/checkedPaisView1"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="52dp"
-        android:text="CheckedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/seleccionaPais"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <CheckedTextView
-        android:id="@+id/checkedPaisView2"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
+    <Button
+        android:id="@+id/btn_pais1"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
-        android:text="CheckedTextView"
+        android:text="PAIS 1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkedPaisView1" />
 
-    <CheckedTextView
-        android:id="@+id/checkedPaisView3"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
+    <Button
+        android:id="@+id/btn_pais2"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:text="CheckedTextView"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="PAIS 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkedPaisView1" />
+
+    <Button
+        android:id="@+id/btn_pais3"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="PAIS 3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkedPaisView2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_pais1" />
+
+    <Button
+        android:id="@+id/btn_pais4"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="PAIS 4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pais2" />
+
+    <Button
+        android:id="@+id/btn_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="OPCIONES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
