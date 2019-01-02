@@ -1,20 +1,19 @@
-{
-  "1":{
+[{
     "Name": "Adidas",
     "Country": "USA",
     "Sector": "Textil",
     "Image":"file:///android_asset/Logos/Adidas.jpg"
       },
-  "2":{
+  {
     "Name": "Allianz",
     "Country": "USA",
     "Sector": "Automoviles",
     "Image":"file:///android_asset/Logos/Allianz.jpg"
       },
-  "3":{
+  {
     "Name": "Facebook",
     "Country": "USA",
     "Sector": "Internet",
     "Image":"file:///android_asset/Logos/Facebook.jpg"
   }
-}
+]

@@ -21,7 +21,7 @@
         app:srcCompat="@color/colorPrimary" />
 
     <CheckedTextView
-        android:id="@+id/checkedPaisView1"
+        android:id="@+id/textview_selectCountry"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="16dp"
         android:text="PAIS 1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkedPaisView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_selectCountry" />
 
     <Button
         android:id="@+id/btn_pais2"
@@ -54,7 +54,7 @@
         android:layout_marginRight="24dp"
         android:text="PAIS 2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkedPaisView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_selectCountry" />
 
     <Button
         android:id="@+id/btn_pais3"

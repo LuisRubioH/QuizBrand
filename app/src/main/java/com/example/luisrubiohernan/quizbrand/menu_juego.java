@@ -17,4 +17,9 @@ public class menu_juego extends AppCompatActivity {
         Intent view =new Intent(getApplicationContext(),JuegoNombresActivity.class);
         startActivity(view);
     }
+
+    public void onClickJuegoPaisesActivity(View view) {
+        Intent intent = new Intent(this, JuegoPaisesActivity.class);
+        startActivityForResult(intent, 0);
+    }
 }

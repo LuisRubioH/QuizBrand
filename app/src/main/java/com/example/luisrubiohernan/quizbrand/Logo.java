@@ -2,7 +2,7 @@ package com.example.luisrubiohernan.quizbrand;
 
 public class Logo {
     private String Name, Country, Sector, Image;
-
+    
     public String getName() {
         return Name;
     }
