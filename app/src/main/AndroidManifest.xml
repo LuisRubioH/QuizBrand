@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +21,14 @@
         <activity
             android:name=".JuegoNombresActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".menu_juego"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".JuegoPaisesActivity"
+        <activity
+            android:name=".menu_juego"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoPaisesActivity"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ResultActivity"></activity>
     </application>
 
 </manifest>

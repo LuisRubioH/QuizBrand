@@ -12,4 +12,7 @@
     <string name="seleccionaSector">Select the sector</string>
     <string name="modo_paises">QuizBrand: Countries</string>
     <string name="contentDescriptionLogo">Logo image</string>
+    <string name="Resultado">Results</string>
+    <string name="resultado">Results</string>
+    <string name="back_to_menu">BACK TO MENU</string>
 </resources>

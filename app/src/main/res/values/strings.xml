@@ -18,4 +18,7 @@
     <string name="btn_pais4" translatable="false">PAIS 4</string>
     <string name="seleccionaSector">Selecciona el sector al que pertenece</string>
 
+    <string name="resultado">PUNTUACIÓN CONSEGUIDA</string>
+    <string name="back_to_menu">VOLVER AL MENU</string>
+
 </resources>

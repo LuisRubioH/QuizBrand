@@ -1,5 +1,6 @@
 package com.example.luisrubiohernan.quizbrand;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -175,7 +176,8 @@ public class JuegoPaisesActivity extends AppCompatActivity {
             SetLogo(countriesArray,chosenLogo);
 
         }else{
-            //Conduce a ResultACtivity
+            Intent intent = new Intent(this, ResultActivity.class);
+            startActivityForResult(intent, 0);
         }
     }
 
