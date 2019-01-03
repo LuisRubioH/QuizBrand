@@ -2,6 +2,7 @@ package com.example.luisrubiohernan.quizbrand;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,8 +30,9 @@ public class JuegoPaisesActivity extends AppCompatActivity {
     private Button btn_pais3;
     private Button btn_pais4;
     private ImageView logoImage;
-
-
+    private String[] countriesArray;
+    private int logoSelector;
+    private Logo chosenLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                     .show();
         }
 
-        String[] arrayPaises = getResources().getStringArray(R.array.countries);
+        countriesArray = getResources().getStringArray(R.array.countries);
         titleview_pais = findViewById(R.id.textview_selectCountry);
         btn_pais1 = findViewById(R.id.btn_pais1);
         btn_pais2 = findViewById(R.id.btn_pais2);
@@ -60,8 +62,15 @@ public class JuegoPaisesActivity extends AppCompatActivity {
 
         //Obtenemos un logo aleatorio del array de logos
         Random random1 = new Random();
-        int logoSelector = random1.nextInt(logosArray.length);
-        Logo logoElegido = logosArray[logoSelector];
+        logoSelector = random1.nextInt(logosArray.length);
+        chosenLogo = logosArray[logoSelector];
+
+        SetLogo(countriesArray,chosenLogo);
+
+
+    }
+
+    public void SetLogo(String[] arrayPaises, Logo logoElegido){
 
         //Mostramos la imagen del logo
         Glide.with(this)
@@ -70,7 +79,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
 
         //Aleatorizamos la posición de la respuesta correcta
         Random random2 = new Random();
-        int buttonRandomizer = random2.nextInt(3);
+        int buttonRandomizer = random2.nextInt(4);
 
         //Array de strings auxiliar que se usará dentro del switch
         String[] buttonString_array = new String[3];
@@ -147,7 +156,27 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                 break;
         }
 
+    }
 
+    public void ButtonIsCorrect(View v){
+        Button pressedButton = (Button)v;
+        String buttonText = pressedButton.getText().toString();
+
+        if (buttonText.equals(chosenLogo.getCountry())) {
+            /// SUMAMOS PUNTOS Y MOSTRAMOS OTRO LOGO
+            Random random4 = new Random();
+            int auxLogoSelector = random4.nextInt(logosArray.length);
+            while (auxLogoSelector == logoSelector) {
+                random4 = new Random();
+                auxLogoSelector = random4.nextInt(logosArray.length);
+            }
+            logoSelector = auxLogoSelector;
+            chosenLogo = logosArray[logoSelector];
+            SetLogo(countriesArray,chosenLogo);
+
+        }else{
+            //Conduce a ResultACtivity
+        }
     }
 
 }

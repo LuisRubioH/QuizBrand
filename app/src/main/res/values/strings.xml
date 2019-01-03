@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">QuizBrand</string>
-    <string name="modo_paises">QuizBrand: Países</string>
     <string name="eliminar">ELIMINAR</string>
     <string name="ok">OK</string>
     <string name="nombres">NOMBRES</string>
@@ -11,6 +10,10 @@
     <string name="empezar">EMPEZAR</string>
 
     <string name="seleccionaPais">Selecciona el país de procedencia:</string>
+    <string name="btn_pais1" translatable="false">PAIS 1</string>
+    <string name="btn_pais2" translatable="false">PAIS 2</string>
+    <string name="btn_pais3" translatable="false">PAIS 3</string>
+    <string name="btn_pais4" translatable="false">PAIS 4</string>
     <string name="seleccionaSector">Selecciona el sector al que pertenece</string>
 
 </resources>

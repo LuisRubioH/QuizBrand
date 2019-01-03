@@ -11,11 +11,10 @@
         android:layout_height="195dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/colorPrimary" />
@@ -36,43 +35,47 @@
 
     <Button
         android:id="@+id/btn_pais1"
-        android:layout_width="165dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="PAIS 1"
+        android:onClick="ButtonIsCorrect"
+        android:text="@string/btn_pais1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_selectCountry" />
 
     <Button
         android:id="@+id/btn_pais2"
-        android:layout_width="165dp"
-        android:layout_height="60dp"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="PAIS 2"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="ButtonIsCorrect"
+        android:text="@string/btn_pais2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_selectCountry" />
 
     <Button
         android:id="@+id/btn_pais3"
-        android:layout_width="165dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="PAIS 3"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="ButtonIsCorrect"
+        android:text="@string/btn_pais3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_pais1" />
 
     <Button
         android:id="@+id/btn_pais4"
-        android:layout_width="165dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="PAIS 4"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="ButtonIsCorrect"
+        android:text="@string/btn_pais4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_pais2" />
 
