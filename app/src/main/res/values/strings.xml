@@ -8,6 +8,8 @@
     <string name="menu">MENÚ</string>
     <string name="opciones">OPCIONES</string>
     <string name="empezar">EMPEZAR</string>
+    <string name="contentDescriptionLogo">Imagen del logo</string>
+
 
     <string name="seleccionaPais">Selecciona el país de procedencia:</string>
     <string name="btn_pais1" translatable="false">PAIS 1</string>
