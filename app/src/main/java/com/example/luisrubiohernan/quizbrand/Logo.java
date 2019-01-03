@@ -1,7 +1,7 @@
 package com.example.luisrubiohernan.quizbrand;
 
 public class Logo {
-    private String Name, Country, Sector, Image;
+    private String Name, Country, Sector, ImagePath;
     
     public String getName() {
         return Name;
@@ -15,7 +15,7 @@ public class Logo {
         return Sector;
     }
 
-    public String getImage() {
-        return Image;
+    public String getImagePath() {
+        return ImagePath;
     }
 }

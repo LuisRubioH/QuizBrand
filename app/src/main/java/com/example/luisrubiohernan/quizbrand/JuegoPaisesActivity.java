@@ -13,9 +13,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.lang.reflect.Type;
-import java.util.List;
+import java.util.Random;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -32,6 +30,8 @@ public class JuegoPaisesActivity extends AppCompatActivity {
     private Button btn_pais4;
     private ImageView logoImage;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,28 +40,114 @@ public class JuegoPaisesActivity extends AppCompatActivity {
         gson = new Gson();
 
         try {
-            InputStream stream = getAssets().open("CompanyList.json");
+            InputStream stream = getAssets().open("_CompanyList.json");
             InputStreamReader reader = new InputStreamReader(stream);
             logosArray = gson.fromJson(reader, Logo[].class);
         }
         catch (IOException e) {
-            Toast.makeText(this, "No se ha podido leer CompanyList.json", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "No se ha podido leer _CompanyList.json", Toast.LENGTH_SHORT)
                     .show();
         }
 
+        String[] arrayPaises = getResources().getStringArray(R.array.countries);
         titleview_pais = findViewById(R.id.textview_selectCountry);
         btn_pais1 = findViewById(R.id.btn_pais1);
         btn_pais2 = findViewById(R.id.btn_pais2);
         btn_pais3 = findViewById(R.id.btn_pais3);
         btn_pais4 = findViewById(R.id.btn_pais4);
         btn_opciones = findViewById(R.id.btn_config);
-        String nombrecillo = logosArray[1].getName();
+        logoImage = findViewById(R.id.imageView_logo);
 
-        btn_pais1.setText(nombrecillo);
+        //Obtenemos un logo aleatorio del array de logos
+        Random random1 = new Random();
+        int logoSelector = random1.nextInt(logosArray.length);
+        Logo logoElegido = logosArray[logoSelector];
 
-//        Glide.with(this)
-//                .load("file:///android_asset/lord.jpg")
-//                .into(logoImage);
+        //Mostramos la imagen del logo
+        Glide.with(this)
+                .load(logoElegido.getImagePath())
+                .into(logoImage);
+
+        //Aleatorizamos la posición de la respuesta correcta
+        Random random2 = new Random();
+        int buttonRandomizer = random2.nextInt(3);
+
+        //Array de strings auxiliar que se usará dentro del switch
+        String[] buttonString_array = new String[3];
+
+        //En el switch se aleatorizan tanto las opciones como sus posiciones (manteniendo siempre una opción correcta)
+        switch (buttonRandomizer){
+            case 0:
+                btn_pais1.setText(logoElegido.getCountry());
+
+                for(int i =0;i<3;i++){
+                    Random random3 = new Random();
+                    int countryRandomizer = random3.nextInt(arrayPaises.length);
+
+                    while (arrayPaises[countryRandomizer].equals(logoElegido.getName())){
+                        random3 = new Random();
+                        countryRandomizer = random3.nextInt(arrayPaises.length);
+                    }
+                    buttonString_array[i] = arrayPaises[countryRandomizer];
+                }
+                btn_pais2.setText(buttonString_array[0]);
+                btn_pais3.setText(buttonString_array[1]);
+                btn_pais4.setText(buttonString_array[2]);
+                break;
+            case 1:
+                btn_pais2.setText(logoElegido.getCountry());
+
+                for(int i =0;i<3;i++){
+                    Random random3 = new Random();
+                    int countryRandomizer = random3.nextInt(arrayPaises.length);
+
+                    while (arrayPaises[countryRandomizer].equals(logoElegido.getName())){
+                        random3 = new Random();
+                        countryRandomizer = random3.nextInt(arrayPaises.length);
+                    }
+                    buttonString_array[i] = arrayPaises[countryRandomizer];
+                }
+                btn_pais1.setText(buttonString_array[0]);
+                btn_pais3.setText(buttonString_array[1]);
+                btn_pais4.setText(buttonString_array[2]);
+                break;
+            case 2:
+                btn_pais3.setText(logoElegido.getCountry());
+
+                for(int i =0;i<3;i++){
+                    Random random3 = new Random();
+                    int countryRandomizer = random3.nextInt(arrayPaises.length);
+
+                    while (arrayPaises[countryRandomizer].equals(logoElegido.getName())){
+                        random3 = new Random();
+                        countryRandomizer = random3.nextInt(arrayPaises.length);
+                    }
+                    buttonString_array[i] = arrayPaises[countryRandomizer];
+                }
+                btn_pais1.setText(buttonString_array[0]);
+                btn_pais2.setText(buttonString_array[1]);
+                btn_pais4.setText(buttonString_array[2]);
+                break;
+            case 3:
+                btn_pais4.setText(logoElegido.getCountry());
+
+                for(int i =0;i<3;i++){
+                    Random random3 = new Random();
+                    int countryRandomizer = random3.nextInt(arrayPaises.length);
+
+                    while (arrayPaises[countryRandomizer].equals(logoElegido.getName())){
+                        random3 = new Random();
+                        countryRandomizer = random3.nextInt(arrayPaises.length);
+                    }
+                    buttonString_array[i] = arrayPaises[countryRandomizer];
+                }
+                btn_pais1.setText(buttonString_array[0]);
+                btn_pais2.setText(buttonString_array[1]);
+                btn_pais3.setText(buttonString_array[2]);
+                break;
+        }
+
+
     }
 
 }

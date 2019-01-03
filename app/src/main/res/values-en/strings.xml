@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">QuizBrand</string>
     <string name="eliminar">DELETE</string>
     <string name="ok">OK</string>
     <string name="nombres">NAMES</string>
@@ -11,4 +10,5 @@
     <string name="empezar">START</string>
     <string name="seleccionaPais">Select the country</string>
     <string name="seleccionaSector">Select the sector</string>
+    <string name="modo_paises">QuizBrand: Countries</string>
 </resources>
