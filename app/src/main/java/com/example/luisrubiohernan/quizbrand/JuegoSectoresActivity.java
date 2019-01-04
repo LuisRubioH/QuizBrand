@@ -17,10 +17,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-import static junit.framework.Assert.assertEquals;
-
-
-public class JuegoPaisesActivity extends AppCompatActivity {
+public class JuegoSectoresActivity extends AppCompatActivity {
 
     private Logo[] logosArray;
     private Gson gson;
@@ -31,7 +28,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
     private Button btn_pais3;
     private Button btn_pais4;
     private ImageView logoImage;
-    private String[] countriesArray;
+    private String[] sectorsArray;
     private int logoSelector;
     private Logo chosenLogo;
 
@@ -52,7 +49,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                     .show();
         }
 
-        countriesArray = getResources().getStringArray(R.array.countries);
+        sectorsArray = getResources().getStringArray(R.array.sectors);
         titleview_pais = findViewById(R.id.textview_selectCountry);
         btn_pais1 = findViewById(R.id.btn_pais1);
         btn_pais2 = findViewById(R.id.btn_pais2);
@@ -66,12 +63,12 @@ public class JuegoPaisesActivity extends AppCompatActivity {
         logoSelector = random1.nextInt(logosArray.length);
         chosenLogo = logosArray[logoSelector];
 
-        SetLogo(countriesArray,chosenLogo);
+        SetLogo(sectorsArray,chosenLogo);
 
 
     }
 
-    public void SetLogo(String[] arrayPaises, Logo logoElegido){
+    public void SetLogo(String[] arraySectores, Logo logoElegido){
 
         //Mostramos la imagen del logo
         Glide.with(this)
@@ -85,38 +82,38 @@ public class JuegoPaisesActivity extends AppCompatActivity {
         //Array de strings auxiliar que se usará dentro del switch
         String[] buttonString_array = new String[4];
 
+
         //En el switch se aleatorizan tanto las opciones como sus posiciones (manteniendo siempre una opción correcta)
         switch (buttonRandomizer){
             case 0:
-                btn_pais1.setText(logoElegido.getCountry());
-
+                btn_pais1.setText(logoElegido.getSector());
                 buttonString_array[0] =  btn_pais1.getText().toString();
 
                 for(int i =1;i<4;i++){
                     Random random3 = new Random();
-                    int sectorRandomizer = random3.nextInt(arrayPaises.length);
+                    int sectorRandomizer = random3.nextInt(arraySectores.length);
 
                     switch (i) {
                         case 1:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 2:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 3:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 3]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 3]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                     }
                 }
@@ -125,35 +122,35 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                 btn_pais4.setText(buttonString_array[3]);
                 break;
             case 1:
-                btn_pais2.setText(logoElegido.getCountry());
+                btn_pais2.setText(logoElegido.getSector());
 
                 buttonString_array[0] =  btn_pais2.getText().toString();
 
                 for(int i =1;i<4;i++){
                     Random random3 = new Random();
-                    int sectorRandomizer = random3.nextInt(arrayPaises.length);
+                    int sectorRandomizer = random3.nextInt(arraySectores.length);
 
                     switch (i) {
                         case 1:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 2:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 3:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 3]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 3]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                     }
                 }
@@ -162,35 +159,34 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                 btn_pais4.setText(buttonString_array[3]);
                 break;
             case 2:
-                btn_pais3.setText(logoElegido.getCountry());
-
+                btn_pais3.setText(logoElegido.getSector());
                 buttonString_array[0] =  btn_pais3.getText().toString();
 
                 for(int i =1;i<4;i++){
                     Random random3 = new Random();
-                    int sectorRandomizer = random3.nextInt(arrayPaises.length);
+                    int sectorRandomizer = random3.nextInt(arraySectores.length);
 
                     switch (i) {
                         case 1:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 2:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 3:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 3]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 3]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                     }
                 }
@@ -199,35 +195,34 @@ public class JuegoPaisesActivity extends AppCompatActivity {
                 btn_pais4.setText(buttonString_array[3]);
                 break;
             case 3:
-                btn_pais4.setText(logoElegido.getCountry());
-
+                btn_pais4.setText(logoElegido.getSector());
                 buttonString_array[0] =  btn_pais4.getText().toString();
 
                 for(int i =1;i<4;i++){
                     Random random3 = new Random();
-                    int sectorRandomizer = random3.nextInt(arrayPaises.length);
+                    int sectorRandomizer = random3.nextInt(arraySectores.length);
 
                     switch (i) {
                         case 1:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 2:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                         case 3:
-                            while (arrayPaises[sectorRandomizer].equals(buttonString_array[i - 3]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 2]) || arrayPaises[sectorRandomizer].equals(buttonString_array[i - 1])) {
+                            while (arraySectores[sectorRandomizer].equals(buttonString_array[i - 3]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 2]) || arraySectores[sectorRandomizer].equals(buttonString_array[i - 1])) {
                                 random3 = new Random();
-                                sectorRandomizer = random3.nextInt(arrayPaises.length);
+                                sectorRandomizer = random3.nextInt(arraySectores.length);
                             }
-                            buttonString_array[i] = arrayPaises[sectorRandomizer];
+                            buttonString_array[i] = arraySectores[sectorRandomizer];
                             break;
                     }
                 }
@@ -243,7 +238,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
         Button pressedButton = (Button)v;
         String buttonText = pressedButton.getText().toString();
 
-        if (buttonText.equals(chosenLogo.getCountry())) {
+        if (buttonText.equals(chosenLogo.getSector())) {
             /// SUMAMOS PUNTOS Y MOSTRAMOS OTRO LOGO
             Random random4 = new Random();
             int auxLogoSelector = random4.nextInt(logosArray.length);
@@ -253,12 +248,11 @@ public class JuegoPaisesActivity extends AppCompatActivity {
             }
             logoSelector = auxLogoSelector;
             chosenLogo = logosArray[logoSelector];
-            SetLogo(countriesArray,chosenLogo);
+            SetLogo(sectorsArray,chosenLogo);
 
         }else{
             Intent intent = new Intent(this, ResultActivity.class);
             startActivityForResult(intent, 0);
         }
     }
-
 }

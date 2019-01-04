@@ -28,6 +28,10 @@
             android:name=".JuegoPaisesActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoSectoresActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity android:name=".ResultActivity"></activity>
     </application>
 

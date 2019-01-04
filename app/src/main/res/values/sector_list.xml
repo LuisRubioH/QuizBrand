@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sectors">
+        <item>Electrónico</item>
+        <item>Textil</item>
+        <item>Automóvil</item>
+        <item>Electrodomesticos</item>
+        <item>Supermercados</item>
+        <item>Alimentación</item>
+    </string-array>
+</resources>
