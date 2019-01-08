@@ -4,12 +4,31 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JuegoNombresActivity extends AppCompatActivity {
+
+    // todo private ArrayList<Logo> ar;
+    private Gson gson;
+    private ImageView logoImage;
+    private int logoSelector;
+
+    private Logo[] logoArray;
+    private Logo chosenLogo;
+
+    private String[] randomNameArray;
+    private Logo chosenRandomName;
+
 
     private boolean[] btn_apretado;
     private ArrayList<LogoItem> itemList;
@@ -32,10 +51,28 @@ public class JuegoNombresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.juego_nombres);
 
+        gson = new Gson();
+
+        try {
+            InputStream stream = getAssets().open("_CompanyList.json");
+            InputStreamReader reader = new InputStreamReader(stream);
+            logoArray = gson.fromJson(reader, Logo[].class);
+        }
+        catch (IOException e) {
+            Toast.makeText(this, "No he podido leer _CompanyList.json", Toast.LENGTH_SHORT)
+                    .show();
+        }
+
 
         current_question =0;
 
         itemList = new ArrayList<>();
+        itemList.add(new LogoItem("HSAODTUDNINAUX","ADIDAS",10));
+        itemList.add(new LogoItem("NAZOLSULJINAOU","ALLIANZ",10));
+        itemList.add(new LogoItem("SKOIFOAAECLBZS","FACEBOOK",10));
+        itemList.add(new LogoItem("NOTGLCEILESARE","EL CORTE INGLES",10));
+        itemList.add(new LogoItem("KNEEIAZNMAOPFO","AMAZON",10));
+        itemList.add(new LogoItem("RSTAPLNOIPEKFP","APPLE",10));
         itemList.add(new LogoItem("CBOAXPABRHRTNI","BP",10));
         itemList.add(new LogoItem("BACDMAUXROIJNB","AUDI",10));
         itemList.add(new LogoItem("ETHRNJPSTIRSOJ","INTERSPORT",10));
@@ -46,11 +83,21 @@ public class JuegoNombresActivity extends AppCompatActivity {
 
 
 
+        //TODO ar=new ArrayList<>();
+
+
+
+        chosenLogo=logoArray[logoSelector];
+        SetLogo(chosenLogo);
+
+        //btn_pais1.setText(logoElegido.getRandomLetter());
+
 
 
         btn_apretado = new boolean[buttons.length];
 
         repartidorDeLetras(itemList);
+        //TODO repartidorDeLetras2(ar);
         contadorDeLetrasRespuesta(itemList);
 
 
@@ -60,50 +107,29 @@ public class JuegoNombresActivity extends AppCompatActivity {
         }
 
 
-
-
-
-        //TODO COMPLETAR AIXO
-       /* boolean spsp=false; //salto de primera a segunda palabra
-        boolean sstp=false; //salto de segunda a tercera palabra
-
-        if (spsp==false){
-            Button btn_continue =(Button)findViewById(R.id.btn_continue);
-            if(cpp<9){
-                btn_continue.setVisibility(View.GONE);
-            }else{
-                btn_continue.setVisibility(View.VISIBLE);
-
-        }else if(sstp==false){
-            if (cpp<9 && csp<9){
-                if (cpp+csp<8){ //ponemos 8 porque sabemos que hay un espacio entre las dos palabras
-
-
-
-                }else{
-                    for(int j=0;j++;j<cpp){
-                        Button btn = (Button) findViewById(button_resp[j]);
-                        btn=setVisibility(View.VISIBLE);
-                    }
-                    for(int j=cpp;j++;j<9){
-                        Button btn = (Button) findViewById(button_resp[j]);
-                        btn=setVisibility(View.GONE)
-
-                }
-            }else if(cpp>7){
-
-            }else{
-
-            }
-        }else{
-
-        }*/
-
-
-
     }
 
+    public void SetLogo(Logo logoElegido){
 
+        logoImage=findViewById(R.id.imageView);
+        Glide.with(this)
+                .load(logoElegido.getImagePath())
+                .into(logoImage);
+
+    }
+ //TODO
+    /*private void repartidorDeLetras2(List<Logo> ar){
+        String itemLista = ar.get(logoSelector).getRandomLetter();
+        char[] c_arr = itemLista.toCharArray();
+        for (int i=0; i<c_arr.length; i++){ //això està per complir els exemples amb quatre botons
+            Button btn = (Button) findViewById(buttons[i]);
+            char a = itemLista.charAt(i);
+            String name = String.valueOf(a);
+            btn.setText(name);
+            btn_apretado[i]=false;
+        }
+
+    }*/
     private void repartidorDeLetras(List<LogoItem> itemList) {  //Reparte las letras random_letter
 
         String itemLista = itemList.get(current_question).getRandom_letter() ;
@@ -246,6 +272,10 @@ public class JuegoNombresActivity extends AppCompatActivity {
         Button btn_before=findViewById(R.id.btn_before);
 
         current_question++;
+        logoSelector++;
+
+        chosenLogo=logoArray[logoSelector];
+        SetLogo(chosenLogo);
 
         if (!itemList.get(current_question).getAnswered()){
 
@@ -280,6 +310,10 @@ public class JuegoNombresActivity extends AppCompatActivity {
         Button btn_next=findViewById(R.id.btn_next);
 
         current_question--;
+        logoSelector--;
+
+        chosenLogo=logoArray[logoSelector];
+        SetLogo(chosenLogo);
 
         if (!itemList.get(current_question).getAnswered()){
 

@@ -1,5 +1,6 @@
 [{
     "Name": "Adidas",
+    "RandomLetter": "HSAODTUDNINAUX",
     "Country": "Estados Unidos",
     "Sector": "Textil",
     "ImagePath":"file:///android_asset/Logos/Adidas.jpg"
@@ -15,5 +16,29 @@
     "Country": "Estados Unidos",
     "Sector": "Internet",
     "ImagePath":"file:///android_asset/Logos/Facebook.jpg"
+  },
+  {
+    "Name": "El Corte Ingles",
+    "Country": "España",
+    "Sector": "Comercio",
+    "ImagePath":"file:///android_asset/QUIZ_BRAND.jpg"
+  },
+  {
+    "Name": "Amazon",
+    "Country": "Estados Unidos",
+    "Sector": "Comercio",
+    "ImagePath":"file:///android_asset/Amazon.jpg"
+  },
+  {
+    "Name": "Apple",
+    "Country": "Estados Unidos",
+    "Sector": "Electronica",
+    "ImagePath":"file:///android_asset/Apple.jpg"
+  },
+  {
+    "Name": "El Corte Ingles",
+    "Country": "España",
+    "Sector": "Comercio",
+    "ImagePath":"file:///android_asset/QUIZ_BRAND.jpg"
   }
 ]
