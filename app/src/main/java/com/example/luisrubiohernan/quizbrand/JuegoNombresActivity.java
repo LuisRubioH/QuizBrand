@@ -250,7 +250,13 @@ public class JuegoNombresActivity extends AppCompatActivity {
 
     public void onClickDelete(View view){
 
-        for (int j=buttons_resp.length-1; j>-1;j--){
+        limpiezaDeLetras(); //tiene que ir antes que repartidorDeLetras
+        repartidorDeLetras(itemList);
+        contadorDeLetrasRespuesta(itemList);
+
+        devolverVisibilidad();
+
+        /*for (int j=buttons_resp.length-1; j>-1;j--){
             Button btn_resp = findViewById(buttons_resp[j]);
             String b = btn_resp.getText().toString();
 
@@ -271,7 +277,7 @@ public class JuegoNombresActivity extends AppCompatActivity {
                     }
                 }
             }
-        }
+        }*/
     }
 
     public void onClickNext(View view){
@@ -436,13 +442,32 @@ public class JuegoNombresActivity extends AppCompatActivity {
     public void onClickOK(View view){
         Button btnok=findViewById(R.id.buttonOK);
         String palabra="";
+        boolean nocompletado=false;
+        int contador_respuesta=0;
+        int contador_letras=0;
+
+        String itemLista = itemList.get(current_question).getAnswer() ;
+        char[] c_arr = itemLista.toCharArray();
+
         for (int j=0;j<buttons_resp.length;j++){
             Button btn=findViewById(buttons_resp[j]);
             String letra=btn.getText().toString();
             palabra += letra;
+            contador_respuesta++;
+            if(contador_respuesta<c_arr.length && letra.equals("")){
+                nocompletado=true;
+                j=buttons_resp.length;
+            }
+
         }
 
-        if (palabra.equals(itemList.get(current_question).getAnswer())){
+
+        if (nocompletado){
+
+            Toast.makeText(this, "No se han completado todos los espacios",
+                    Toast.LENGTH_SHORT).show();
+
+        }else if (palabra.equals(itemList.get(current_question).getAnswer())){
 
             itemList.get(current_question).setAlreadyAnswered();
 
