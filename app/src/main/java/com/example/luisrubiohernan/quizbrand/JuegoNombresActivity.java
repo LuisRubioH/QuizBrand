@@ -18,17 +18,13 @@ import java.util.List;
 
 public class JuegoNombresActivity extends AppCompatActivity {
 
-    // todo private ArrayList<Logo> ar;
+
     private Gson gson;
     private ImageView logoImage;
     private int logoSelector;
 
     private Logo[] logoArray;
     private Logo chosenLogo;
-
-    private String[] randomNameArray;
-    private Logo chosenRandomName;
-
 
     private boolean[] btn_apretado;
     private ArrayList<LogoItem> itemList;
@@ -67,60 +63,60 @@ public class JuegoNombresActivity extends AppCompatActivity {
         current_question =0;
 
         itemList = new ArrayList<>();
-        itemList.add(new LogoItem("HSAODTUDNINAUX","ADIDAS",10));
+
+        itemList.add(new LogoItem("LMTEROALADMEUS","ESTRELLA DAMM",10));
+        itemList.add(new LogoItem("HLNOURANALEPRN","RALPH LAUREN",10));
         itemList.add(new LogoItem("NAZOLSULJINAOU","ALLIANZ",10));
-        itemList.add(new LogoItem("SKOIFOAAECLBZS","FACEBOOK",10));
-        itemList.add(new LogoItem("NOTGLCEILESARE","EL CORTE INGLES",10));
-        itemList.add(new LogoItem("KNEEIAZNMAOPFO","AMAZON",10));
-        itemList.add(new LogoItem("RSTAPLNOIPEKFP","APPLE",10));
-        itemList.add(new LogoItem("FESNOLRMTIAMLL","ARIEL",10));
-        itemList.add(new LogoItem("UTSEUCPUISNOMA","ASICS",10));
-        itemList.add(new LogoItem("NYAFOUANTRSIMA","ASTURIANA",10));
-        itemList.add(new LogoItem("BACDMAUXROIJNB","AUDI",10));
         itemList.add(new LogoItem("BMTYWCNZRKASLA","BARCLAYS",10));
-        itemList.add(new LogoItem("RENFJUVAAZYNBO","BAYER",10));
-        itemList.add(new LogoItem("JPALEIBINAUCST","BIC",10));
-        itemList.add(new LogoItem("RTAMIOJUEMBOBR","BIMBO",10));
-        itemList.add(new LogoItem("LBECYRAZENRIBK","BLACKBERRY",10));
-        itemList.add(new LogoItem("OBTTOEIHUNESLU","BLUETOOTH",10));
-        itemList.add(new LogoItem("HJNELOSBRMCJOL","BOSCH",10));
-        itemList.add(new LogoItem("IPTNJSOTABBRME","BP",10));
-        itemList.add(new LogoItem("NOFSTAL+ARCTOE","CANAL+",10));
         itemList.add(new LogoItem("NATKNORRETWOCO","CARTOON NETWORK",10));
-        itemList.add(new LogoItem("SROMATRIECLJLA","CASTROL",10));
-        itemList.add(new LogoItem("IENAURLSNMECTO","CITROEN",10));
+        itemList.add(new LogoItem("HJNELOSBRMCJOL","BOSCH",10));
+        itemList.add(new LogoItem("SKOIFOAAECLBZS","FACEBOOK",10));
         itemList.add(new LogoItem("CACDASORCOMTEL","COCA COLA",10));
-        itemList.add(new LogoItem("NNETOCALMNTONI","CONTINENTAL",10));
+        itemList.add(new LogoItem("OBTTOEIHUNESLU","BLUETOOTH",10));
+        itemList.add(new LogoItem("NOTGLCEILESARE","EL CORTE INGLES",10));
+        itemList.add(new LogoItem("RSTAPLNOIPEKFP","APPLE",10));
+        itemList.add(new LogoItem("UTSEUCPUISNOMA","ASICS",10));
         itemList.add(new LogoItem("OAERMLCPRECNTO","CORONA",10));
         itemList.add(new LogoItem("DNIMAMTJKNELRO","DANONE",10));
-        itemList.add(new LogoItem("ELMNELIOLSRTDI","DELL",10));
-        itemList.add(new LogoItem("ADEORSMTRTFEKN","DREAMWORKS",10));
+        itemList.add(new LogoItem("SROMATRIECLJLA","CASTROL",10));
+        itemList.add(new LogoItem("BACDMAUXROIJNB","AUDI",10));
         itemList.add(new LogoItem("ENTYENSMETMILA","ELEMENT",10));
-        itemList.add(new LogoItem("LMTEROALADMEUS","ESTRELLA DAMM",10));
-        itemList.add(new LogoItem("EAHAPERTWKTCDL","HEWLETT PACKARD",10));
         itemList.add(new LogoItem("YONLIEAIHNAYMD","HOLIDAY INN",10));
+        itemList.add(new LogoItem("RENFJUVAAZYNBO","BAYER",10));
         itemList.add(new LogoItem("UNOIOGHTPSABRP","TOSHIBA",10));
+        itemList.add(new LogoItem("RTAMIOJUEMBOBR","BIMBO",10));
+        itemList.add(new LogoItem("LBECYRAZENRIBK","BLACKBERRY",10));
+        itemList.add(new LogoItem("NOFSTAL+ARCTOE","CANAL+",10));
+        itemList.add(new LogoItem("IPTNJSOTABBRME","BP",10));
+        itemList.add(new LogoItem("IENAURLSNMECTO","CITROEN",10));
+        itemList.add(new LogoItem("NNETOCALMNTONI","CONTINENTAL",10));
+        itemList.add(new LogoItem("FESNOLRMTIAMLL","ARIEL",10));
+        itemList.add(new LogoItem("ELMNELIOLSRTDI","DELL",10));
+        itemList.add(new LogoItem("HSAODTUDNINAUX","ADIDAS",10));
+        itemList.add(new LogoItem("JPALEIBINAUCST","BIC",10));
+        itemList.add(new LogoItem("ADEORSMTRTFEKN","DREAMWORKS",10));
+        itemList.add(new LogoItem("NYAFOUANTRSIMA","ASTURIANA",10));
+        itemList.add(new LogoItem("EAHAPERTWKTCDL","HEWLETT PACKARD",10));
         itemList.add(new LogoItem("AHSUANARYNTTLF","LUFTHANSA",10));
-        itemList.add(new LogoItem("HLNOURANALEPRN","RALPH LAUREN",10));
+        itemList.add(new LogoItem("KNEEIAZNMAOPFO","AMAZON",10));
 
 
 
 
-        //TODO ar=new ArrayList<>();
+
 
 
 
         chosenLogo=logoArray[logoSelector];
         SetLogo(chosenLogo);
 
-        //btn_pais1.setText(logoElegido.getRandomLetter());
+
 
 
 
         btn_apretado = new boolean[buttons.length];
 
         repartidorDeLetras(itemList);
-        //TODO repartidorDeLetras2(ar);
         contadorDeLetrasRespuesta(itemList);
 
 
@@ -140,19 +136,7 @@ public class JuegoNombresActivity extends AppCompatActivity {
                 .into(logoImage);
 
     }
- //TODO
-    /*private void repartidorDeLetras2(List<Logo> ar){
-        String itemLista = ar.get(logoSelector).getRandomLetter();
-        char[] c_arr = itemLista.toCharArray();
-        for (int i=0; i<c_arr.length; i++){ //això està per complir els exemples amb quatre botons
-            Button btn = (Button) findViewById(buttons[i]);
-            char a = itemLista.charAt(i);
-            String name = String.valueOf(a);
-            btn.setText(name);
-            btn_apretado[i]=false;
-        }
 
-    }*/
     private void repartidorDeLetras(List<LogoItem> itemList) {  //Reparte las letras random_letter
 
         String itemLista = itemList.get(current_question).getRandom_letter() ;
