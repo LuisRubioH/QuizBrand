@@ -1,9 +1,9 @@
 package com.example.luisrubiohernan.quizbrand;
 
 public class Puntuacion {
-    private static int puntuacion_nombres;
-    private static int puntuacion_paises;
-    private static int puntuacion_sectores;
+    private static int puntuacion_nombres = 0;
+    private static int puntuacion_paises  = 0;
+    private static int puntuacion_sectores  = 0;
 
     public static int getPuntuacionNombres(){
         return puntuacion_nombres;
