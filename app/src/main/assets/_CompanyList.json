@@ -8,7 +8,7 @@
   {
     "Name": "Allianz",
     "Country": "Estados Unidos",
-    "Sector": "Automóvil",
+    "Sector": "Automovil",
     "ImagePath":"file:///android_asset/Logos/Allianz.jpg"
       },
   {
@@ -21,7 +21,7 @@
     "Name": "El Corte Ingles",
     "Country": "España",
     "Sector": "Comercio",
-    "ImagePath":"file:///android_asset/QUIZ_BRAND.jpg"
+    "ImagePath":"file:///android_asset/elcorteingles.jpg"
   },
   {
     "Name": "Amazon",
@@ -32,13 +32,182 @@
   {
     "Name": "Apple",
     "Country": "Estados Unidos",
-    "Sector": "Electronica",
+    "Sector": "Tecnologico",
     "ImagePath":"file:///android_asset/Apple.jpg"
   },
   {
-    "Name": "El Corte Ingles",
+    "Name": "Ariel",
+    "Country": "Reino Unido",
+    "Sector": "Higienico",
+    "ImagePath":"file:///android_asset/Ariel.jpg"
+  },
+  {
+    "Name": "Asics",
+    "Country": "Japón",
+    "Sector": "Textil",
+    "ImagePath":"file:///android_asset/Asics.jpg"
+  },
+  {
+    "Name": "Asturiana",
     "Country": "España",
-    "Sector": "Comercio",
-    "ImagePath":"file:///android_asset/QUIZ_BRAND.jpg"
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/asturiana.jpg"
+  },
+  {
+    "Name": "Audi",
+    "Country": "Alemania",
+    "Sector": "Automocion",
+    "ImagePath":"file:///android_asset/audi.jpg"
+  },
+  {
+    "Name": "Barclays",
+    "Country": "Reino Unido",
+    "Sector": "Financiero",
+    "ImagePath":"file:///android_asset/Barclays.jpg"
+  },
+  {
+    "Name": "Bayer",
+    "Country": "Alemania",
+    "Sector": "Farmaceutico",
+    "ImagePath":"file:///android_asset/Bayer.jpg"
+  },
+  {
+    "Name": "Bic",
+    "Country": "Francia",
+    "Sector": "Industria Manufacturera",
+    "ImagePath":"file:///android_asset/bic.jpg"
+  },
+  {
+    "Name": "Bimbo",
+    "Country": "España",
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/bimbo.jpg"
+  },
+  {
+    "Name": "BlackBerry",
+    "Country": "Canada",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/Blackberry.jpg"
+  },
+  {
+    "Name": "Bluetooth",
+    "Country": "Estados Unidos",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/Bluetooth.jpg"
+  },
+  {
+    "Name": "Bosch",
+    "Country": "Alemana",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/Bosch.jpg"
+  },
+  {
+    "Name": "BP",
+    "Country": "Reino Unido",
+    "Sector": "Energia",
+    "ImagePath":"file:///android_asset/BP.jpg"
+  },
+  {
+    "Name": "Canal+",
+    "Country": "Francia",
+    "Sector": "Television",
+    "ImagePath":"file:///android_asset/Canal+.jpg"
+  },
+  {
+    "Name": "Cartoon Network",
+    "Country": "Estados Unidos",
+    "Sector": "Television",
+    "ImagePath":"file:///android_asset/CartoonNetwork.jpg"
+  },
+  {
+    "Name": "Castrol",
+    "Country": "Reino Unido",
+    "Sector": "Energia",
+    "ImagePath":"file:///android_asset/Castrol.jpg"
+  },
+  {
+    "Name": "Citroen",
+    "Country": "Francia",
+    "Sector": "Automocion",
+    "ImagePath":"file:///android_asset/Citroen.jpg"
+  },
+  {
+    "Name": "Coca Cola",
+    "Country": "Estados Unidos",
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/CocaCola.jpg"
+  },
+  {
+    "Name": "Continental",
+    "Country": "Alemania",
+    "Sector": "Automocion",
+    "ImagePath":"file:///android_asset/Continental.jpg"
+  },
+  {
+    "Name": "Corona",
+    "Country": "Mexico",
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/Corona.jpg"
+  },
+  {
+    "Name": "Danone",
+    "Country": "España",
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/Danone.jpg"
+  },
+  {
+    "Name": "Dell",
+    "Country": "Estados Unidos",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/Dell.jpg"
+  },
+  {
+    "Name": "DreamWorks",
+    "Country": "Estados Unidos",
+    "Sector": "Cinematografico",
+    "ImagePath":"file:///android_asset/DreamWorks.jpg"
+  },
+  {
+    "Name": "Element",
+    "Country": "Estados Unidos",
+    "Sector": "Textil",
+    "ImagePath":"file:///android_asset/Element.jpg"
+  },
+  {
+    "Name": "Estrella Damm",
+    "Country": "España",
+    "Sector": "Alimentacion",
+    "ImagePath":"file:///android_asset/EstrellaDamm.jpg"
+  },
+  {
+    "Name": "Hewlett Packard",
+    "Country": "Estados Unidos",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/HewlettPackard.jpg"
+  },
+  {
+    "Name": "Holiday Inn",
+    "Country": "Reino Unido",
+    "Sector": "Hoteles",
+    "ImagePath":"file:///android_asset/HolidayInn.jpg"
+  },
+  {
+    "Name": "Toshiba",
+    "Country": "Japon",
+    "Sector": "Tecnologico",
+    "ImagePath":"file:///android_asset/Toshiba.jpg"
+  },
+  {
+    "Name": "Lufthansa",
+    "Country": "Alemania",
+    "Sector": "Aviacion",
+    "ImagePath":"file:///android_asset/Lufthansa.jpg"
+  },
+  {
+    "Name": "Ralph Lauren",
+    "Country": "Estados Unidos",
+    "Sector": "Textil",
+    "ImagePath":"file:///android_asset/RalphLauren.jpg"
   }
+
 ]
