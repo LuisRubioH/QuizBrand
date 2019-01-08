@@ -33,6 +33,7 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".HighScoresActivity"></activity>
     </application>
 
 </manifest>

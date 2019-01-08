@@ -34,6 +34,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
     private String[] countriesArray;
     private int logoSelector;
     private Logo chosenLogo;
+    private int puntuacion = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,6 +246,7 @@ public class JuegoPaisesActivity extends AppCompatActivity {
 
         if (buttonText.equals(chosenLogo.getCountry())) {
             /// SUMAMOS PUNTOS Y MOSTRAMOS OTRO LOGO
+            puntuacion = puntuacion + 10;
             Random random4 = new Random();
             int auxLogoSelector = random4.nextInt(logosArray.length);
             while (auxLogoSelector == logoSelector) {
@@ -257,7 +259,13 @@ public class JuegoPaisesActivity extends AppCompatActivity {
 
         }else{
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("puntuacion",puntuacion);
             startActivityForResult(intent, 0);
+
+            
+
+
+
         }
     }
 
