@@ -258,14 +258,11 @@ public class JuegoPaisesActivity extends AppCompatActivity {
             SetLogo(countriesArray,chosenLogo);
 
         }else{
+            int puntuacionMasAlta = Puntuacion.getPuntuacionPaises();
+            if(puntuacion > puntuacionMasAlta); Puntuacion.setPuntuacionPaises(puntuacion);
             Intent intent = new Intent(this, ResultActivity.class);
             intent.putExtra("puntuacion",puntuacion);
             startActivityForResult(intent, 0);
-
-            
-
-
-
         }
     }
 

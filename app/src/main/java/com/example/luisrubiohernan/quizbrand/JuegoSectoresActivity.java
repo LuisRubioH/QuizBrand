@@ -256,6 +256,8 @@ public class JuegoSectoresActivity extends AppCompatActivity {
             SetLogo(sectorsArray,chosenLogo);
 
         }else{
+            int puntuacionMasAlta = Puntuacion.getPuntuacionSectores();
+            if(puntuacion > puntuacionMasAlta); Puntuacion.setPuntuacionSectores(puntuacion);
             Intent intent = new Intent(this, ResultActivity.class);
             intent.putExtra("puntuacion",puntuacion);
             startActivityForResult(intent, 0);
