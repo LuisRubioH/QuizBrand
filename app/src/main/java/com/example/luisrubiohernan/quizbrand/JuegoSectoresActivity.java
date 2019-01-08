@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -31,6 +33,8 @@ public class JuegoSectoresActivity extends AppCompatActivity {
     private String[] sectorsArray;
     private int logoSelector;
     private Logo chosenLogo;
+    private int puntuacion = 0;
+    JSONObject JSon_Puntuaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -240,6 +244,7 @@ public class JuegoSectoresActivity extends AppCompatActivity {
 
         if (buttonText.equals(chosenLogo.getSector())) {
             /// SUMAMOS PUNTOS Y MOSTRAMOS OTRO LOGO
+            puntuacion = puntuacion + 10;
             Random random4 = new Random();
             int auxLogoSelector = random4.nextInt(logosArray.length);
             while (auxLogoSelector == logoSelector) {
@@ -252,6 +257,7 @@ public class JuegoSectoresActivity extends AppCompatActivity {
 
         }else{
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("puntuacion",puntuacion);
             startActivityForResult(intent, 0);
         }
     }

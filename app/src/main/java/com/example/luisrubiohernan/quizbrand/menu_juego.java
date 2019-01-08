@@ -7,6 +7,20 @@ import android.view.View;
 
 public class menu_juego extends AppCompatActivity {
 
+    private int puntuaciones;
+
+    public int getPuntuaciones() {
+        return puntuaciones;
+    }
+
+    public void setPuntuaciones(int _puntuaciones) {
+        this.puntuaciones = _puntuaciones;
+    }
+
+
+    private int puntuacion_nombres;
+    private int puntuacion_paises;
+    private int puntuacion_sectores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +39,11 @@ public class menu_juego extends AppCompatActivity {
 
     public void onClickJuegoSectoresActivity(View view) {
         Intent intent = new Intent(this, JuegoSectoresActivity.class);
+        startActivityForResult(intent, 0);
+    }
+
+    public void onClickHighScoresActivity(View view) {
+        Intent intent = new Intent(this, HighScoresActivity.class);
         startActivityForResult(intent, 0);
     }
 }
