@@ -73,13 +73,36 @@ public class JuegoNombresActivity extends AppCompatActivity {
         itemList.add(new LogoItem("NOTGLCEILESARE","EL CORTE INGLES",10));
         itemList.add(new LogoItem("KNEEIAZNMAOPFO","AMAZON",10));
         itemList.add(new LogoItem("RSTAPLNOIPEKFP","APPLE",10));
-        itemList.add(new LogoItem("CBOAXPABRHRTNI","BP",10));
+        itemList.add(new LogoItem("FESNOLRMTIAMLL","ARIEL",10));
+        itemList.add(new LogoItem("UTSEUCPUISNOMA","ASICS",10));
+        itemList.add(new LogoItem("NYAFOUANTRSIMA","ASTURIANA",10));
         itemList.add(new LogoItem("BACDMAUXROIJNB","AUDI",10));
-        itemList.add(new LogoItem("ETHRNJPSTIRSOJ","INTERSPORT",10));
+        itemList.add(new LogoItem("BMTYWCNZRKASLA","BARCLAYS",10));
+        itemList.add(new LogoItem("RENFJUVAAZYNBO","BAYER",10));
+        itemList.add(new LogoItem("JPALEIBINAUCST","BIC",10));
+        itemList.add(new LogoItem("RTAMIOJUEMBOBR","BIMBO",10));
+        itemList.add(new LogoItem("LBECYRAZENRIBK","BLACKBERRY",10));
+        itemList.add(new LogoItem("OBTTOEIHUNESLU","BLUETOOTH",10));
+        itemList.add(new LogoItem("HJNELOSBRMCJOL","BOSCH",10));
+        itemList.add(new LogoItem("IPTNJSOTABBRME","BP",10));
+        itemList.add(new LogoItem("NOFSTAL+ARCTOE","CANAL+",10));
+        itemList.add(new LogoItem("NATKNORRETWOCO","CARTOON NETWORK",10));
+        itemList.add(new LogoItem("SROMATRIECLJLA","CASTROL",10));
+        itemList.add(new LogoItem("IENAURLSNMECTO","CITROEN",10));
+        itemList.add(new LogoItem("CACDASORCOMTEL","COCA COLA",10));
+        itemList.add(new LogoItem("NNETOCALMNTONI","CONTINENTAL",10));
+        itemList.add(new LogoItem("OAERMLCPRECNTO","CORONA",10));
+        itemList.add(new LogoItem("DNIMAMTJKNELRO","DANONE",10));
+        itemList.add(new LogoItem("ELMNELIOLSRTDI","DELL",10));
+        itemList.add(new LogoItem("ADEORSMTRTFEKN","DREAMWORKS",10));
+        itemList.add(new LogoItem("ENTYENSMETMILA","ELEMENT",10));
+        itemList.add(new LogoItem("LMTEROALADMEUS","ESTRELLA DAMM",10));
+        itemList.add(new LogoItem("EAHAPERTWKTCDL","HEWLETT PACKARD",10));
+        itemList.add(new LogoItem("YONLIEAIHNAYMD","HOLIDAY INN",10));
         itemList.add(new LogoItem("UNOIOGHTPSABRP","TOSHIBA",10));
-        itemList.add(new LogoItem("TAARSUMNTIOMLY","LOTUS",10));
+        itemList.add(new LogoItem("AHSUANARYNTTLF","LUFTHANSA",10));
         itemList.add(new LogoItem("HLNOURANALEPRN","RALPH LAUREN",10));
-        itemList.add(new LogoItem("ESTRELLADAMMOU","ESTRELLA DAMM",10));
+
 
 
 
