@@ -310,7 +310,7 @@ public class JuegoNombresActivity extends AppCompatActivity {
             btn_before.setVisibility(View.VISIBLE);
         }
 
-        if (current_question == 39) {
+        if (current_question == 34) {
             btn_next.setVisibility(View.INVISIBLE);
         }
 
@@ -424,7 +424,7 @@ public class JuegoNombresActivity extends AppCompatActivity {
             alpha = String.valueOf(c_arr[7]);
             betta = String.valueOf(c_arr[8]);
 
-            if (!alpha.equals("") && !betta.equals("")) {
+            if (!alpha.equals(" ") && !betta.equals(" ")) {
                 btncontinuar.setVisibility(View.VISIBLE);
             } else {
                 btncontinuar.setVisibility(View.INVISIBLE);
